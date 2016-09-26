@@ -1,0 +1,33 @@
+Programmers Task List.
+
+High Level Objectives:
+1. Ready the robot for competition
+- Complete changes needed to TeleOp
+- Define all Autonomous Modes
+- Code all Autonomous Modes
+- Build test OI Buttons to test isolated functionality.
+
+
+1. Complete changes needed for TeleOp
+- Complete - Remove unused Commands - MagForward, MagRevers, AutoCMD1 (leave this is OI class, just comment out.  It will be our test button).
+- Complete - Rename DriveCourtyard to just DriveEncoder, pass in a parameter that is the distance to drive.
+- Complete - Remove DriveOuterworks, not needed.
+- Complete - Add commands to help autonomous coding:
+- Complete -- ArmOut
+- Complete -- ArmBack
+- Complete -- Pivot - the robot will not only need to drive straight but it will need to pivot based on Gyro feedback, so we can shoot in autonomous.
+- Complete - ArmUtil changes (we will mock up the Pot values, and map them to RobotMap.  We will calibrate all this on Thursday and Hofstra).
+- Complete -- Add Potentiometer - Hold off on this!
+- Complete -- Add Encoder - Ben found the cable connector and we can use the Mag Encoder.
+- Complete -- Add Limit Switches
+- Complete -- Code in the Encoder (not Pot) and Switches to control motor operation within the Util class.
+- Robot.java
+-- Add driveUtil.calibrateGyro() to robotInit() method
+-- Get CameraServer working and ensure code is ready for cameras (USB, Axis) - Validate roboRIO config in browser!
+
+2. Define all Autonomous Modes
+- I have gone thru this and I have defined 11 different modes that we could/should support.
+- We can review these tonight and come to agreement.
+- Once we have agreement it is a matter of coding each Command/CommandGroup and adding to the SendableChooser() in Robot.java.  Oh and testing each on our autoCMD1 test button!
+
+Thanks!
